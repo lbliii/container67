@@ -1,0 +1,14 @@
+<section class="spread inner-stretch">
+    {{range .Site.RegularPages}}
+        {{if .Page.Params.hidden}}
+        {{else}}
+            <a href="{{.Permalink}}" class="spread is-half is-fullsize-mobile inner-black">
+                <div class=" outlined-white m-2 p-2 rounded-1 move-u">
+                    <h2 class="m-1 p-1">{{.Title}}</h2>
+                    <p class="m-2 p-2 text-justify">{{if .Description}} {{.Description}} {{else}}{{.Summary}}{{end}}</p>
+                </div>
+            </a>
+        {{end}}
+    {{end}}
+
+</section>

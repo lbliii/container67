@@ -1,0 +1,7 @@
+  {{$reader := resources.Get "js/reader.js"  | resources.Minify  }}
+
+{{ $js := slice  $reader | resources.Concat "js/bundle.js"}}
+
+  <footer>
+    <script src="{{ $js.Permalink }}" ></script>
+  </footer>

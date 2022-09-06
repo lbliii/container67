@@ -1,0 +1,98 @@
+/* Content */
+
+.content > h1, .content > h2, .content > h3, .content > h4, .content > h5, .content > h6 {
+  margin-top: var(--xxxlarge-text);
+}
+
+.content > p {
+
+  font-size: var(--small-text);
+  line-height: 1.5;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: var(--xlarge-text);
+  
+}
+
+
+/* breadcrumb */
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.breadcrumb::after {
+    content: "/";
+    margin: 0 0.5em;
+    color: var(--is-grey);
+}
+
+.breadcrumb:last-child::after {
+    content: "";
+}
+
+/* buttons */
+
+button, .button {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+    color: inherit;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+
+/* Labels  */ 
+ 
+.label {
+    flex: 0;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center; 
+    background-color: inherit;
+    color: inherit;
+}
+
+
+/* Images */
+
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-1x1 {
+    aspect-ratio: 1 / 1;
+}
+
+.image-2x1 {
+    aspect-ratio: 2 / 1;
+}
+
+.image-3x2 {
+    aspect-ratio: 3 / 2;
+}
+
+.image-4x3 {
+    aspect-ratio: 4 / 3;
+}
+
+.image-16x9 {
+    aspect-ratio: 16 / 9;
+}
+
+.anchor {
+    color: var(--is-purple) !important;
+    font-size: .5em;
+    font-weight: 900;
+}

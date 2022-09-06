@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="black">
+    {{- partial "head.html" . -}}
+    <body class="stack">
+        {{ partial "header.html" . }}
+        {{ partial "nav" . }}
+        {{ block "before" . }}{{ end }}
+        <section class="spread">
+                {{ partial "directory.html" . }}
+            <div class="is-four-fifths is-fullsize-mobile">
+                {{ range after 1 .Site.RegularPages}}
+                <article class="content p-4 mt-5" id="{{.Title}}">
+                    <button class="p-1  brighten-1 is-fit"onClick="Hide(parentElement)">Hide Chapter</button>
+                    <button onClick="Reveal()" class="is-fit p-1">Show Previous</button>
+                    {{.Content}}
+                </article>
+                {{end}}
+            </div>
+            
+        </section>
+        <div class="stack-center">
+            <button class="p-1  brighten-1 is-fit"onClick="Reset()">Show All Chapters</button>
+        </div>
+        {{ partial "footer.html" . }}
+    </body>
+</html>
+

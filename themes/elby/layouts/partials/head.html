@@ -1,0 +1,30 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="title" content="{{ .Title }}" />
+    <meta name="description" content="{{ .Description }}" />
+    <meta name="keywords" content="{{ .Keywords }}" />
+    <meta name="author" content="{{ .Params.author }}" />
+    <meta name="robots" content="index, follow" />
+    
+    {{ template "_internal/twitter_cards.html" . }}
+    
+    {{ $core := resources.Get "css/core.css" }}
+    {{ $layout := resources.Get "css/layout.css" }}
+    {{ $objects := resources.Get "css/objects.css"  }}
+    {{ $traits := resources.Get "css/traits.css"  }}
+    {{ $spacing := resources.Get "css/spacing.css"  }}
+    {{ $text := resources.Get "css/text.css"  }}
+    {{ $color := resources.Get "css/color.css"  }}
+
+    {{ $css := slice $core $layout $objects $traits $spacing $text $color | resources.Concat "css/emdash-v0.1.0.css"}}
+    {{$cssPublic := $css}}
+    {{ $cssMin := $css | resources.Minify }}
+    {{ $secureCSS := $cssMin | resources.Fingerprint "sha512"}}
+    
+    <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" media="screen" />
+    <link rel="stylesheet" href="{{ $cssPublic.Permalink }}" media="print" />
+    <link rel="stylesheet" href="{{ $cssMin.Permalink }}" media="print" />
+
+
+</head>

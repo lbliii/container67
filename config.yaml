@@ -1,0 +1,12 @@
+baseURL: '/'
+languageCode: 'en-us'
+title: 'Container67'
+
+theme: elby 
+
+outputs: 
+  home: [ "HTML"]
+  page: [ "HTML"]
+  section: [ "HTML"]
+  list: [ "HTML"]
+  taxonomies: [ "HTML"]

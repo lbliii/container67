@@ -1,0 +1,216 @@
+/* Flexbox Layout System */
+
+/* Spread things horizontally */
+
+.spread {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.spread-left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.spread-right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.spread-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.spread-around {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.spread  > * , .spread-left  > * , .spread-right  > * , .spread-around  > * , .spread-center  > * , .spread-stretch > * {
+    flex: 1;
+}
+
+/* Spread Items Ordering*/
+
+.item {
+    order: 0;
+}
+
+.item-1 {
+    order: 1;
+}
+
+.item-2 {
+    order: 2;
+}
+
+.item-3 {
+    order: 3;
+}
+
+.item-4 {
+    order: 4;
+}
+
+.item-5 {
+    order: 5;
+}
+
+.item-6 {
+    order: 6;
+}
+
+.item-7 {
+    order: 7;
+}
+
+/*  Spread  Item Sizes */
+
+
+.is-full {
+    flex-basis: 100%;
+}
+
+.is-half {
+    flex-basis: 50%;
+    flex-grow: 0;
+}
+
+.is-one-third {
+    flex-basis: 33.33333%;
+    flex-grow: 0;
+}
+
+
+.is-two-thirds {
+    flex-basis: 66.66667%;
+    flex-grow: 0;
+}
+
+.is-one-fourth {
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.is-three-fourths {
+    flex-basis: 75%;
+    flex-grow: 0;
+}
+
+.is-one-fifth {
+    flex-basis: 20%;
+    flex-grow: 0;
+}
+
+.is-two-fifths {
+    flex-basis: 40%;
+    flex-grow: 0;
+}
+
+.is-three-fifths {
+    flex-basis: 60%;
+    flex-grow: 0;
+}
+
+.is-four-fifths {
+    flex-basis: 80%;
+    flex-grow: 0;
+}
+
+.inner-full > * {
+    flex-basis: 100%;
+}
+
+.inner-half > * {
+    flex-basis:  50%;
+    flex-grow: 0;
+}
+
+.inner-one-third > * {
+    flex-basis: 33.33333%;
+    flex-grow: 0;
+}
+
+.inner-two-thirds > * {
+    flex-basis: 66.66667%;
+    flex-grow: 0;
+}
+
+.inner-one-fourth > * {
+    flex-basis: 25%;
+    flex-grow: 0;
+}
+
+.inner-three-fourths > * {
+    flex-basis: 75%;
+    flex-grow: 0;
+}
+
+.inner-one-fifth > * {
+    flex-basis: 20%;
+    flex-grow: 0;
+}
+
+.inner-two-fifths > * {
+    flex-basis: 40%;
+    flex-grow: 0;
+}
+
+.inner-three-fifths > * {
+    flex-basis: 60%;
+    flex-grow: 0;
+}
+
+.inner-four-fifths > * {
+    flex-basis: 80%;
+    flex-grow: 0;
+}
+
+
+/* Stack things vertically */
+
+.stack {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    
+}
+
+.stack-left {
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin:0;
+    padding:0;
+}
+
+.stack-center {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+
+.stack-right {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin:0;
+    padding:0;
+    
+}
+
+
+.stack > *, .stack-top > *, .stack-center > *, .stack-bottom > *, .stack-stretch > * {
+    flex: 1;
+}
+
